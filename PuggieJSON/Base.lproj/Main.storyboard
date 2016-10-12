@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qEx-Yn-Hih">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Puggies-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="PuggieJSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-yX-lCs">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zzU-aX-SAh">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <scrollView key="backgroundView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Vcn-Xw-PwZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="583"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </scrollView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PugCell" id="q59-iC-2tS" customClass="PugCell" customModule="PuggieJSON" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6L-gl-B63">
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Xqb-hP-tiQ" appends="YES" id="ji5-kx-cTD"/>
+                                                        <outletCollection property="gestureRecognizers" destination="hLg-YN-N9G" appends="YES" id="epv-tH-apr"/>
+                                                    </connections>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="q6L-gl-B63" firstAttribute="leading" secondItem="q59-iC-2tS" secondAttribute="leadingMargin" id="272-J6-bW9"/>
+                                            <constraint firstItem="q6L-gl-B63" firstAttribute="trailing" secondItem="q59-iC-2tS" secondAttribute="trailingMargin" id="DyI-kj-P7R"/>
+                                            <constraint firstItem="q6L-gl-B63" firstAttribute="top" secondItem="q59-iC-2tS" secondAttribute="topMargin" id="QfU-0o-394"/>
+                                            <constraint firstItem="q6L-gl-B63" firstAttribute="bottom" secondItem="q59-iC-2tS" secondAttribute="bottomMargin" id="Zkf-xR-D7y"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pugImageView" destination="q6L-gl-B63" id="M1Z-tz-TOb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LdF-yX-lCs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="2T7-h6-HX2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LdF-yX-lCs" secondAttribute="bottom" id="3DM-Ba-Bhk"/>
+                            <constraint firstAttribute="trailing" secondItem="LdF-yX-lCs" secondAttribute="trailing" constant="16" id="T6K-kD-tIz"/>
+                            <constraint firstItem="LdF-yX-lCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="sXX-bn-gWJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Puggies" id="sEF-2o-yjf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LdF-yX-lCs" id="eZT-rh-WMz"/>
+                        <outlet property="scrollView" destination="Vcn-Xw-PwZ" id="whg-G9-H9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="Xqb-hP-tiQ"/>
+                <tapGestureRecognizer id="hLg-YN-N9G">
+                    <connections>
+                        <action selector="segueToPugDetail:" destination="BYZ-38-t0r" id="ltS-Mk-1nu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Pug DetailVC-->
+        <scene sceneID="Zak-fq-wZ0">
+            <objects>
+                <viewController storyboardIdentifier="toPugDetail" id="nBB-3I-OjS" customClass="PugDetailVC" customModule="PuggieJSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yac-XU-GQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="VpD-4G-1Ci"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wJO-pd-KBW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-C2-jBh">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pug Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aI-Mm-dbC">
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axr-hD-aDb">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="aIT-J8-uYR"/>
+                                            <constraint firstAttribute="width" constant="46" id="bvK-Qf-gVa"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Back"/>
+                                        <connections>
+                                            <action selector="dismissDetailVC:" destination="nBB-3I-OjS" eventType="touchUpInside" id="vhD-Rc-t7j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Axr-hD-aDb" firstAttribute="top" secondItem="GHm-C2-jBh" secondAttribute="top" constant="6" id="2I5-if-q52"/>
+                                    <constraint firstItem="5aI-Mm-dbC" firstAttribute="centerY" secondItem="GHm-C2-jBh" secondAttribute="centerY" id="Ea2-yY-FvE"/>
+                                    <constraint firstItem="Axr-hD-aDb" firstAttribute="leading" secondItem="GHm-C2-jBh" secondAttribute="leading" constant="2" id="IvZ-YU-HOr"/>
+                                    <constraint firstAttribute="height" constant="55" id="yMx-hm-9fj"/>
+                                    <constraint firstItem="5aI-Mm-dbC" firstAttribute="centerX" secondItem="GHm-C2-jBh" secondAttribute="centerX" id="zfG-o1-HNE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X01-Gj-2Du" customClass="DetailBackgroundView" customModule="PuggieJSON" customModuleProvider="target">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pug" translatesAutoresizingMaskIntoConstraints="NO" id="EKx-qD-JZy" customClass="PugDetailImageView" customModule="PuggieJSON" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="359" id="L26-DL-tyy"/>
+                                            <constraint firstAttribute="width" constant="313" id="f7a-lD-Me0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="389" id="9g6-lj-pUB"/>
+                                    <constraint firstAttribute="width" constant="343" id="VEY-HV-Lrl"/>
+                                    <constraint firstItem="EKx-qD-JZy" firstAttribute="centerX" secondItem="X01-Gj-2Du" secondAttribute="centerX" id="de5-eO-TFr"/>
+                                    <constraint firstItem="EKx-qD-JZy" firstAttribute="centerY" secondItem="X01-Gj-2Du" secondAttribute="centerY" id="tIp-CP-2GC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X01-Gj-2Du" firstAttribute="centerY" secondItem="wJO-pd-KBW" secondAttribute="centerY" id="8ia-Z9-zSP"/>
+                            <constraint firstAttribute="trailing" secondItem="GHm-C2-jBh" secondAttribute="trailing" id="Jdy-a4-ppa"/>
+                            <constraint firstItem="X01-Gj-2Du" firstAttribute="centerX" secondItem="wJO-pd-KBW" secondAttribute="centerX" id="X7l-HN-z8Q"/>
+                            <constraint firstItem="GHm-C2-jBh" firstAttribute="top" secondItem="wJO-pd-KBW" secondAttribute="top" id="cUk-m0-1Rz"/>
+                            <constraint firstItem="GHm-C2-jBh" firstAttribute="leading" secondItem="wJO-pd-KBW" secondAttribute="leading" id="pee-Vu-HvX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pugDetailImageVuew" destination="EKx-qD-JZy" id="k06-4y-NsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1q-yF-zm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="145.27736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2KU-nA-dWz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qEx-Yn-Hih" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qfH-Zv-vyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QeK-P1-rwh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ip0-o3-u6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="626" height="626"/>
+        <image name="Pug" width="300" height="304"/>
+    </resources>
+</document>
